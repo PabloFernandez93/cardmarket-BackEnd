@@ -18,11 +18,9 @@ public class Pokemon { //CardType
 
     private String type;
 
-    private int availability; //zu Card?
+    private int availability;
 
-    private String rarity; //zu Card?
-
-    private int edition; //zu Card?
+    private int edition;
 
     @OneToMany(mappedBy = "pokemon") //types
     private List<Card> cards;

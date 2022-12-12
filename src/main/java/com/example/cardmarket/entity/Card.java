@@ -27,6 +27,8 @@ public class Card {
 
     private String print;
 
+    private String rarity;
+
     @ManyToOne
     private Pokemon pokemon;
 
