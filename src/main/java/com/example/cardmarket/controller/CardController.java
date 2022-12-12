@@ -44,14 +44,14 @@ public class CardController {
         cardService.deleteCard(id);
     }
 
-    @PutMapping("/{id}")
-    public Card updateCard(@PathVariable int id, @RequestBody Card card) {
-        Card foundCard = cardService.findById(id);
-        foundCard.setPrice(card.getPrice());
-        foundCard.setCondition(card.getCondition());
-        foundCard.setLanguage(card.getLanguage());
-        foundCard.setPrint(card.getPrint());
-    }
+//    @PutMapping("/{id}")
+//    public Card updateCard(@PathVariable int id, @RequestBody Card card) {
+//        Card foundCard = cardService.findById(id);
+//        foundCard.setPrice(card.getPrice());
+//        foundCard.setCondition(card.getCondition());
+//        foundCard.setLanguage(card.getLanguage());
+//        foundCard.setPrint(card.getPrint());
+//    }
 
 
 

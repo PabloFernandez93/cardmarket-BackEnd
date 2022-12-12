@@ -10,26 +10,21 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Pokemon {
+public class Pokemon { //CardType
 
     @Id
-    @GeneratedValue(strategy =GenerationType.IDENTITY)
-    @Column(name = "pokemonId")
-    private int pokemonId;
+    @GeneratedValue
+    private Long id;
 
-    @Column(name = "name")
-    private String name;
+    private String type;
 
-    @Column(name = "avalaibility")
-    private int avalaibility;
+    private int availability; //zu Card?
 
-    @Column(name = "rarity")
-    private String rarity;
+    private String rarity; //zu Card?
 
-    @Column(name = "edition")
-    private int edition;
+    private int edition; //zu Card?
 
-    @OneToMany(mappedBy = "pokemon")
+    @OneToMany(mappedBy = "pokemon") //types
     private List<Card> cards;
 
 }
