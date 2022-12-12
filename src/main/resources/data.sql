@@ -7,7 +7,7 @@ INSERT INTO pokemon(type,availability, rarity, edition) VALUES ('Charizard', 0, 
 INSERT INTO pokemon(type,availability, rarity, edition) VALUES ('Squirtle', 0, null, 1);
 INSERT INTO pokemon(type,availability, rarity, edition) VALUES ('Wartortle', 0, null, 1);
 INSERT INTO pokemon(type,availability, rarity, edition) VALUES ('Blastoise', 0, null, 1);
--- INSERT INTO pokemon(name,availability, rarity, edition) VALUES ('Caterpie', 0, null, 1);
+INSERT INTO pokemon(name,availability, rarity, edition) VALUES ('Caterpie', 0, null, 1);
 -- INSERT INTO pokemon(name,availability, rarity, edition) VALUES ('Caterpie', 0, null, 1);
 -- INSERT INTO pokemon(name,availability, rarity, edition) VALUES ('Metapod', 0, null, 1);
 -- INSERT INTO pokemon(name,availability, rarity, edition) VALUES ('Butterfree', 0, null, 1);
