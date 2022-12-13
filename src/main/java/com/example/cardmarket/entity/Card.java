@@ -9,17 +9,18 @@ import lombok.*;
 import java.util.List;
 
 @Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
+//@Getter
+//@Setter
 public class Card {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String serialnumber; //für die Kartenbezeichnung im jeweiligen Set, z.B. 01-102
+    private String serialNumber; //für die Kartenbezeichnung im jeweiligen Set, z.B. 01-102
 
     private String name;
 
