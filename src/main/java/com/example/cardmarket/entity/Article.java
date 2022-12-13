@@ -24,7 +24,7 @@ public class Article {
     @GeneratedValue
     private Long id;
 
-    private String condition;
+    private Condition condition;
 
     private String language;
 

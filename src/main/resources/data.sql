@@ -1,4 +1,4 @@
--- INSERT INTO pokemon(type,availability, rarity, edition) VALUES ('Bulbasaur', 0, null, 1);
+INSERT INTO Card(type,availability, rarity, edition) VALUES ('Bulbasaur', 0, null, 1);
 -- INSERT INTO pokemon(type,availability, rarity, edition) VALUES ('Ivysaur', 0, null, 1);
 -- INSERT INTO pokemon(type,availability, rarity, edition) VALUES ('Venusaur', 0, null, 1);
 -- INSERT INTO pokemon(type,availability, rarity, edition) VALUES ('Charmander', 0, null, 1);

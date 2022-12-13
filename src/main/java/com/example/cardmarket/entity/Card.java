@@ -23,13 +23,13 @@ public class Card {
 
     private String name;
 
-    private String type;
+    private CardType type;
 
     private int availability;
 
     private String set;
 
-    private String rarity;
+    private Rarity rarity;
 
     @OneToMany(mappedBy = "card")
     @JsonIgnoreProperties("card")
