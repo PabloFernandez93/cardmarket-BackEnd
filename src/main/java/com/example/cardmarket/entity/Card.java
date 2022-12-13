@@ -12,12 +12,15 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-//@Getter
-//@Setter
+@Table (name = "Card")
+@Getter
+@Setter
 public class Card {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+
     private Long id;
 
     private String serialNumber; //für die Kartenbezeichnung im jeweiligen Set, z.B. 01-102

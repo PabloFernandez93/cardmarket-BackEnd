@@ -21,7 +21,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 public class Article {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
 
     private Condition condition;
@@ -31,6 +31,7 @@ public class Article {
     private String print;
 
     @ManyToOne
+    @JsonIgnoreProperties("articles")
     private Card card;
 
 
