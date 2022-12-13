@@ -1,11 +1,11 @@
 package com.example.cardmarket.enums;
 
 
-public enum rarity {
+public enum Rarity {
 
-    PROMO,
     COMMON,
     UNCOMMON,
-    RARE
+    RARE,
+    HOLO_RARE
 
 }

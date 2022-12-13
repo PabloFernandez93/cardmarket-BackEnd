@@ -1,0 +1,16 @@
+Entity 1 - Card:
+
+Card-No: 		id auto generate
+Name:			string
+CardTyp:		enum: Pokemon, Trainer, Energy...
+Thumbnail:		string
+Rarity: 		enum
+
+Entity 2 - Artikel:	(OneToMany)
+
+Article-Id:		id auto generate
+Price:			double
+Condition:		enum
+language:		string
+
+https://www.pokewiki.de/Grundset_(TCG)

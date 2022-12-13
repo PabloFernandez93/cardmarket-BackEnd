@@ -1,37 +1,38 @@
 package com.example.cardmarket.entity;
 
-
+import com.example.cardmarket.enums.CardType;
+import com.example.cardmarket.enums.Rarity;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-
 public class Card {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private double price;
+    private String serialnumber; //für die Kartenbezeichnung im jeweiligen Set, z.B. 01-102
 
-    private String condition;
+    private String name;
 
-    private String language;
+    private String type;
 
-    private String print;
+    private int availability;
+
+    private String set;
 
     private String rarity;
 
-    @ManyToOne
-    private Pokemon pokemon;
-
-
+    @OneToMany(mappedBy = "card")
+    @JsonIgnoreProperties("card")
+    private List<Article> articles;
 
 }
