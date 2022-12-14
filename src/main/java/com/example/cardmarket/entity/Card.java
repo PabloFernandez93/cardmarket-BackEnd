@@ -27,12 +27,14 @@ public class Card {
 
     private String name;
 
+    @Enumerated(EnumType.STRING)
     private CardType type;
 
     private int availability;
 
     private String set;
 
+    @Enumerated(EnumType.STRING)
     private Rarity rarity;
 
     @OneToMany(mappedBy = "card")
