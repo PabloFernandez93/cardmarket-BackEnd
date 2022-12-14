@@ -15,25 +15,25 @@ public class ArticleController {
     }
 
     //  get card by id
-    @GetMapping("/article/{id}")
+    @GetMapping("/{id}")
     public Article findById(@PathVariable int id) {
         return articleService.findById(id);
     }
 
     //  get all cards
-    @GetMapping("/articles")
+    @GetMapping
     public List<Article> getCards() {
         return articleService.findAll();
     }
 
     //  add card
-    @PostMapping("/article")
+    @PostMapping
     public void addCard(@RequestBody Article article) {
         articleService.add(article);
     }
 
     //  add list of cards
-    @PostMapping("/articles")
+    @PostMapping("/list")
     public void addCards(@RequestBody List<Article> articles) {
         articleService.addCards(articles);
     }

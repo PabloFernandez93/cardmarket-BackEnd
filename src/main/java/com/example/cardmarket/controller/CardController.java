@@ -3,13 +3,14 @@ package com.example.cardmarket.controller;
 import com.example.cardmarket.entity.Card;
 import com.example.cardmarket.service.CardService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/cardmarket/card")
+@RequestMapping("/cardmarket/cards")
 
 public class CardController {
 
@@ -19,10 +20,13 @@ public class CardController {
         this.cardService = cardService;
     }
 
-    @GetMapping("/getall")
-    public List<Card> getAllPokemon() {
-        return (List<Card>) this.cardService.getAllPokemon();
+    @GetMapping
+    public List<Card> getAllCards() {
+        return (List<Card>) this.cardService.getAll();
     }
 
-
+    @GetMapping("/{id}")
+    public Card findById(@PathVariable int id) {
+        return cardService.findById(id);
+    }
 }

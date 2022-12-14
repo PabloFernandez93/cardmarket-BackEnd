@@ -19,7 +19,9 @@ public class CardService {
         this.cardRepository = cardRepository;
     }
 
-    public Iterable<Card> getAllPokemon() {
+    public Iterable<Card> getAll() {
         return this.cardRepository.findAll();
     }
+
+    public Card findById(int id) {return this.cardRepository.findById(id).get();}
 }
