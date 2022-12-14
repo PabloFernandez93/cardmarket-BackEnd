@@ -6,7 +6,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/cardmarket")
+@RequestMapping("/cardmarket/article")
 public class ArticleController {
 
     private ArticleService articleService;
