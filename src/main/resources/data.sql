@@ -1,4 +1,14 @@
 INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('001-102', 'Alakazam', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('002-102', 'Blastoise', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('003-102', 'Chansey', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('004-102', 'Charizard', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('005-102', 'Clefairy', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('006-102', 'Gyarados', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('007-102', 'Hitmonchan', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('008-102', 'Machamp', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('009-102', 'Magneton', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('010-102', 'Mewtwo', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
+
 
 -- INSERT INTO pokemon(type,availability, rarity, edition) VALUES ('Ivysaur', 0, null, 1);
 -- INSERT INTO pokemon(type,availability, rarity, edition) VALUES ('Venusaur', 0, null, 1);
