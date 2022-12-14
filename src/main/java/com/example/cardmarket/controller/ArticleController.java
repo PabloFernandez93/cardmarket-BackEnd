@@ -6,7 +6,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/cardmarket/api")
+@RequestMapping("/cardmarket")
 public class ArticleController {
 
     private ArticleService articleService;
@@ -15,25 +15,25 @@ public class ArticleController {
     }
 
     //  get card by id
-    @GetMapping("/card/{id}")
+    @GetMapping("/article/{id}")
     public Article findById(@PathVariable int id) {
         return articleService.findById(id);
     }
 
     //  get all cards
-    @GetMapping("/cards")
+    @GetMapping("/articles")
     public List<Article> getCards() {
         return articleService.findAll();
     }
 
     //  add card
-    @PostMapping("/postcard")
+    @PostMapping("/postarticle")
     public void addCard(@RequestBody Article article) {
         articleService.add(article);
     }
 
     //  add list of cards
-    @PostMapping("/cards")
+    @PostMapping("/articles")
     public void addCards(@RequestBody List<Article> articles) {
         articleService.addCards(articles);
     }

@@ -30,7 +30,7 @@ public class Card {
 
     private int availability;
 
-    private String cardset;
+    private String cardSet;
 
     @Enumerated(EnumType.STRING)
     private Rarity rarity;
