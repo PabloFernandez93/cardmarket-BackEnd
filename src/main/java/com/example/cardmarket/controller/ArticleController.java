@@ -27,7 +27,7 @@ public class ArticleController {
     }
 
     //  add card
-    @PostMapping("/postarticle")
+    @PostMapping("/article")
     public void addCard(@RequestBody Article article) {
         articleService.add(article);
     }

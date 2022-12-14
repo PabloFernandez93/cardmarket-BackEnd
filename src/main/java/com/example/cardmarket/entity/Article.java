@@ -28,7 +28,7 @@ public class Article {
 
     private String language;
 
-    private String print;
+    private Long price;
 
     @ManyToOne
     @JsonIgnoreProperties("articles")
