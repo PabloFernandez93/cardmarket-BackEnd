@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @NoArgsConstructor
 @Getter
@@ -19,7 +21,7 @@ public class CardService {
         this.cardRepository = cardRepository;
     }
 
-    public Iterable<Card> getAll() {
+    public List<Card> getAll() {
         return this.cardRepository.findAll();
     }
 

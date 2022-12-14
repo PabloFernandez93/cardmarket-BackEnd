@@ -2,6 +2,7 @@ package com.example.cardmarket.controller;
 
 import com.example.cardmarket.entity.Card;
 import com.example.cardmarket.service.CardService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/cardmarket/cards")
-
+@CrossOrigin("http://localhost:4200")
 public class CardController {
 
     private CardService cardService;
@@ -22,7 +23,7 @@ public class CardController {
 
     @GetMapping
     public List<Card> getAllCards() {
-        return (List<Card>) this.cardService.getAll();
+        return this.cardService.getAll();
     }
 
     @GetMapping("/{id}")
