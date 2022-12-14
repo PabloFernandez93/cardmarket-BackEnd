@@ -19,8 +19,6 @@ public class Card {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-
     private Long id;
 
     private String serialNumber; //für die Kartenbezeichnung im jeweiligen Set, z.B. 01-102
@@ -32,7 +30,7 @@ public class Card {
 
     private int availability;
 
-    private String set;
+    private String cardset;
 
     @Enumerated(EnumType.STRING)
     private Rarity rarity;
