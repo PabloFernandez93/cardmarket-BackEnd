@@ -7,7 +7,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/cardmarket/article")
-@CrossOrigin("*")
+@CrossOrigin("http://localhost:4200")
 public class ArticleController {
 
     private ArticleService articleService;
@@ -17,7 +17,7 @@ public class ArticleController {
 
     //  get card by id
     @GetMapping("/{id}")
-    public Article findById(@PathVariable int id) {
+    public Article findById(@PathVariable Long id) {
         return articleService.findById(id);
     }
 
@@ -36,13 +36,13 @@ public class ArticleController {
     //  add list of cards
     @PostMapping("/list")
     public void addCards(@RequestBody List<Article> articles) {
-        articleService.addCards(articles);
+        articleService.addArticles(articles);
     }
 
     //  delete card by id
     @DeleteMapping("/delete/{id}")
-    public void deleteCard (@PathVariable int id) {
-        articleService.deleteCard(id);
+    public void deleteCard (@PathVariable Long id) {
+        articleService.deleteArticle(id);
     }
 
 //    @PutMapping("/{id}")

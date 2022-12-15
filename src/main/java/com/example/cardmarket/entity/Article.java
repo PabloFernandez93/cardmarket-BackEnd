@@ -2,6 +2,7 @@ package com.example.cardmarket.entity;
 
 
 import com.example.cardmarket.enums.Condition;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -28,6 +29,8 @@ public class Article {
 
     @ManyToOne
     @JsonIgnoreProperties("articles")
+    @JsonBackReference
+//    @JoinColumn(name = "card_id", referencedColumnName = "id")
     private Card card;
 
 

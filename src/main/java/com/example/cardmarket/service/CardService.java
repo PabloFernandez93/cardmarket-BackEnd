@@ -25,5 +25,5 @@ public class CardService {
         return this.cardRepository.findAll();
     }
 
-    public Card findById(int id) {return this.cardRepository.findById(id).get();}
+    public Card findById(Long id) {return this.cardRepository.findById(id).get();}
 }

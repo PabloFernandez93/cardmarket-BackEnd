@@ -3,8 +3,10 @@ package com.example.cardmarket.entity;
 import com.example.cardmarket.enums.CardType;
 import com.example.cardmarket.enums.Rarity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
@@ -28,6 +30,7 @@ public class Card {
     @Enumerated(EnumType.STRING)
     private CardType type;
 
+
     private int availability;
 
     private String cardSet;
@@ -36,7 +39,8 @@ public class Card {
     private Rarity rarity;
 
     @OneToMany(mappedBy = "card")
-    @JsonIgnoreProperties("card")
+    @JsonManagedReference
+//    @JsonIgnoreProperties("card")
     private List<Article> articles;
 
 }
