@@ -7,6 +7,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/cardmarket/article")
+@CrossOrigin("*")
 public class ArticleController {
 
     private ArticleService articleService;
