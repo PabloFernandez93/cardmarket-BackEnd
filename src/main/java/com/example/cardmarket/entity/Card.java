@@ -2,6 +2,7 @@ package com.example.cardmarket.entity;
 
 import com.example.cardmarket.enums.CardType;
 import com.example.cardmarket.enums.Rarity;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
@@ -40,7 +41,6 @@ public class Card {
 
     @OneToMany(mappedBy = "card")
     @JsonManagedReference
-//    @JsonIgnoreProperties("card")
     private List<Article> articles;
 
 }
