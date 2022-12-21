@@ -1,13 +1,14 @@
-INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('001-102', 'Alakazam', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
-INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('002-102', 'Blastoise', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
-INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('003-102', 'Chansey', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
-INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('004-102', 'Charizard', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
-INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('005-102', 'Clefairy', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
-INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('006-102', 'Gyarados', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
-INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('007-102', 'Hitmonchan', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
-INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('008-102', 'Machamp', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
-INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('009-102', 'Magneton', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
-INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('010-102', 'Mewtwo', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
+
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity, image) VALUES ('001-102', 'Alakazam', 'POKEMON', 0, 'Base Set', 'HOLO_RARE','https://cdn-cardmavin.mavin.io/wp-content/uploads/2018/11/Base_Set_card_1-109x150.jpg');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity, image) VALUES ('002-102', 'Blastoise', 'POKEMON', 0, 'Base Set', 'HOLO_RARE', 'https://cdn-cardmavin.mavin.io/wp-content/uploads/2018/11/Base_Set_card_2-109x150.jpg');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity, image) VALUES ('003-102', 'Chansey', 'POKEMON', 0, 'Base Set', 'HOLO_RARE', 'https://cdn-cardmavin.mavin.io/wp-content/uploads/2018/11/Base_Set_card_3-109x150.jpg');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity, image) VALUES ('004-102', 'Charizard', 'POKEMON', 0, 'Base Set', 'HOLO_RARE', 'https://cdn-cardmavin.mavin.io/wp-content/uploads/2018/11/Base_Set_card_4-109x150.jpg');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity, image) VALUES ('005-102', 'Clefairy', 'POKEMON', 0, 'Base Set', 'HOLO_RARE', 'https://cdn-cardmavin.mavin.io/wp-content/uploads/2018/11/Base_Set_card_5-109x150.jpg');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity, image) VALUES ('006-102', 'Gyarados', 'POKEMON', 0, 'Base Set', 'HOLO_RARE', 'https://cdn-cardmavin.mavin.io/wp-content/uploads/2018/11/Base_Set_card_6-109x150.jpg');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity, image) VALUES ('007-102', 'Hitmonchan', 'POKEMON', 0, 'Base Set', 'HOLO_RARE', 'https://cdn-cardmavin.mavin.io/wp-content/uploads/2018/11/Base_Set_card_7-109x150.jpg');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity, image) VALUES ('008-102', 'Machamp', 'POKEMON', 0, 'Base Set', 'HOLO_RARE', 'https://cdn-cardmavin.mavin.io/wp-content/uploads/2018/11/Base_Set_card_8-109x150.jpg');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity, image) VALUES ('009-102', 'Magneton', 'POKEMON', 0, 'Base Set', 'HOLO_RARE', 'https://cdn-cardmavin.mavin.io/wp-content/uploads/2018/11/Base_Set_card_9-109x150.jpg');
+INSERT INTO card(serial_number, name, type, availability, card_set, rarity, image) VALUES ('010-102', 'Mewtwo', 'POKEMON', 0, 'Base Set', 'HOLO_RARE', 'https://cdn-cardmavin.mavin.io/wp-content/uploads/2018/11/Base_Set_card_10-109x150.jpg');
 
 
 INSERT INTO article(condition, language, price, card_id) VALUES ('MINT', 'ENGLISH', 15.2, 1);
