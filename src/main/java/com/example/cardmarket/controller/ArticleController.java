@@ -49,10 +49,12 @@ public class ArticleController {
     //  delete card by id
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteCard (@PathVariable Long id) {
-        articleService.deleteArticle(id);
-        return ResponseEntity.ok().build();
-
-    }
+        if (articleService.findById(id).isPresent()) {
+            articleService.deleteArticle(id);
+            return ResponseEntity.ok().build();
+        }
+        return ResponseEntity.notFound().build();
+            }
 
     @PutMapping
     public ResponseEntity<Article> updateArticle(@RequestBody Article article) {
