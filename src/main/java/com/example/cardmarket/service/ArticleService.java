@@ -47,6 +47,9 @@ public class ArticleService {
                 updateAvailability(article));
             }
 
+    public Article updateArticle(Article article) {
+        return articleRepository.save(article);
+    }
 
     private void updateAvailability(Article article) {
         cardRepository.findById(
@@ -57,5 +60,6 @@ public class ArticleService {
                     cardRepository.save(card);
                 });
     }
+
 
 }

@@ -1,6 +1,7 @@
 package com.example.cardmarket.controller;
 import com.example.cardmarket.entity.Article;
 import com.example.cardmarket.service.ArticleService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -43,6 +44,14 @@ public class ArticleController {
     @DeleteMapping("/delete/{id}")
     public void deleteCard (@PathVariable Long id) {
         articleService.deleteArticle(id);
+    }
+
+    @PutMapping
+    public ResponseEntity<Article> updateArticle(@RequestBody Article article) {
+        if (article.getId() == null) {
+            return ResponseEntity.badRequest().build();
+        }
+        return ResponseEntity.ok(articleService.updateArticle(article));
     }
 
 //    @PutMapping("/{id}")
