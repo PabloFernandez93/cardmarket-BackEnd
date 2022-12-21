@@ -22,6 +22,7 @@ public class Article {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Enumerated(EnumType.STRING)
     private Condition condition;
 
     private String language;
@@ -29,7 +30,6 @@ public class Article {
     private Long price;
 
     @ManyToOne
-
     @JsonBackReference
     private Card card;
 
