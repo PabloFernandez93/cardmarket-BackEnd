@@ -18,20 +18,26 @@ public class ArticleController {
 
     //  get card by id
     @GetMapping("/{id}")
-    public Article findById(@PathVariable Long id) {
-        return articleService.findById(id);
+    public ResponseEntity<Article> findById(@PathVariable Long id) {
+        return articleService.findById(id)
+                .map(article -> ResponseEntity.ok(article))
+                .orElse(ResponseEntity.noContent().build());
     }
 
     //  get all cards
     @GetMapping
-    public List<Article> getCards() {
-        return articleService.findAll();
+    public ResponseEntity<List<Article>> getCards() {
+        return ResponseEntity.ok(articleService.findAll());
     }
 
     //  add card
     @PostMapping
-    public void addCard(@RequestBody Article article) {
+    public ResponseEntity<Article> addCard(@RequestBody Article article) {
+        if (article.getId() != null) {
+            return ResponseEntity.badRequest().build();
+        }
         articleService.add(article);
+        return ResponseEntity.ok(article);
     }
 
     //  add list of cards
@@ -54,14 +60,7 @@ public class ArticleController {
         return ResponseEntity.ok(articleService.updateArticle(article));
     }
 
-//    @PutMapping("/{id}")
-//    public Card updateCard(@PathVariable int id, @RequestBody Card card) {
-//        Card foundCard = cardService.findById(id);
-//        foundCard.setPrice(card.getPrice());
-//        foundCard.setCondition(card.getCondition());
-//        foundCard.setLanguage(card.getLanguage());
-//        foundCard.setPrint(card.getPrint());
-//    }
+
 
 
 

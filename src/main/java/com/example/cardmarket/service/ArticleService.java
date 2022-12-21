@@ -24,8 +24,8 @@ public class ArticleService {
         return (List<Article>) articleRepository.findAll();
     }
 
-    public Article findById(Long id) {
-        return articleRepository.findById(id).get();
+    public Optional <Article> findById(Long id) {
+        return articleRepository.findById(id);
     }
 
     public void add(Article article) {
