@@ -30,7 +30,7 @@ public class Article {
     private Long price;
 
     @ManyToOne
-    @JsonBackReference
+    @JsonIgnoreProperties("articles")
     private Card card;
 
 

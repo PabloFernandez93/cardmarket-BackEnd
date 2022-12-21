@@ -40,7 +40,7 @@ public class Card {
     private Rarity rarity;
 
     @OneToMany(mappedBy = "card")
-    @JsonManagedReference
+    @JsonIgnoreProperties("card")
     private List<Article> articles;
 
 }
