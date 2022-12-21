@@ -40,16 +40,18 @@ public class ArticleController {
         return ResponseEntity.ok(article);
     }
 
-    //  add list of cards
-    @PostMapping("/list")
-    public void addCards(@RequestBody List<Article> articles) {
-        articleService.addArticles(articles);
-    }
+//    //  add list of cards
+//    @PostMapping("/list")
+//    public void addCards(@RequestBody List<Article> articles) {
+//        articleService.addArticles(articles);
+//    }
 
     //  delete card by id
     @DeleteMapping("/delete/{id}")
-    public void deleteCard (@PathVariable Long id) {
+    public ResponseEntity<Void> deleteCard (@PathVariable Long id) {
         articleService.deleteArticle(id);
+        return ResponseEntity.ok().build();
+
     }
 
     @PutMapping
