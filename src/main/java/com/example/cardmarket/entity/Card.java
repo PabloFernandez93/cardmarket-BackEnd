@@ -38,6 +38,8 @@ public class Card {
     @Enumerated(EnumType.STRING)
     private Rarity rarity;
 
+    private String image;
+
     @OneToMany(mappedBy = "card")
     @JsonManagedReference
     private List<Article> articles;
