@@ -10,11 +10,11 @@ INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALU
 INSERT INTO card(serial_number, name, type, availability, card_set, rarity) VALUES ('010-102', 'Mewtwo', 'POKEMON', 0, 'Base Set', 'HOLO_RARE');
 
 
-INSERT INTO article(condition, language, price, card_id) VALUES ('MINT', 'English', 15.2, 1);
-INSERT INTO article(condition, language, price, card_id) VALUES ('CUSTOM', 'English', 15.2, 3);
-INSERT INTO article(condition, language, price, card_id) VALUES ('NEAR_MINT', 'English', 15.2, 4);
-INSERT INTO article(condition, language, price, card_id) VALUES ('LIGHT_PLAYED', 'English', 15.2, 5);
-INSERT INTO article(condition, language, price, card_id) VALUES ('CUSTOM', 'English', 15.2, 1);
+INSERT INTO article(condition, language, price, card_id) VALUES ('MINT', 'ENGLISH', 15.2, 1);
+INSERT INTO article(condition, language, price, card_id) VALUES ('CUSTOM', 'ENGLISH', 15.2, 3);
+INSERT INTO article(condition, language, price, card_id) VALUES ('NEAR_MINT', 'ENGLISH', 15.2, 4);
+INSERT INTO article(condition, language, price, card_id) VALUES ('LIGHT_PLAYED', 'ENGLISH', 15.2, 5);
+INSERT INTO article(condition, language, price, card_id) VALUES ('CUSTOM', 'ENGLISH', 15.2, 1);
 
 
 -- INSERT INTO pokemon(type,availability, rarity, edition) VALUES ('Ivysaur', 0, null, 1);

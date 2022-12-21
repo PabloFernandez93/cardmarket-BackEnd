@@ -2,6 +2,7 @@ package com.example.cardmarket.entity;
 
 
 import com.example.cardmarket.enums.Condition;
+import com.example.cardmarket.enums.Language;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -25,9 +26,10 @@ public class Article {
     @Enumerated(EnumType.STRING)
     private Condition condition;
 
-    private String language;
+    @Enumerated(EnumType.STRING)
+    private Language language;
 
-    private Long price;
+    private double price;
 
     @ManyToOne
     @JsonBackReference

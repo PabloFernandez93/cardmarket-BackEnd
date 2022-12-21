@@ -31,7 +31,6 @@ public class Card {
     @Enumerated(EnumType.STRING)
     private CardType type;
 
-
     private int availability;
 
     private String cardSet;
