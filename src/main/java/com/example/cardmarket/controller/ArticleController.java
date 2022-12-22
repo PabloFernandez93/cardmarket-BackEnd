@@ -1,6 +1,7 @@
 package com.example.cardmarket.controller;
 import com.example.cardmarket.entity.Article;
 import com.example.cardmarket.service.ArticleService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -57,7 +58,7 @@ public class ArticleController {
             }
 
     @PutMapping
-    public ResponseEntity<Article> updateArticle(@RequestBody Article article) {
+    public ResponseEntity<Article> updateArticle(@RequestBody @Valid Article article) {
         if (article.getId() == null) {
             return ResponseEntity.badRequest().build();
         }

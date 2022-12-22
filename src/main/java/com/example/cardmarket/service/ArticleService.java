@@ -51,7 +51,7 @@ public class ArticleService {
         return articleRepository.save(article);
     }
 
-    private void updateAvailability(Article article) {
+    public void updateAvailability(Article article) {
         cardRepository.findById(
                         article.getCard().getId()
                 )
