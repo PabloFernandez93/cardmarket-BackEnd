@@ -8,6 +8,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,11 +33,12 @@ public class Article {
     @Enumerated(EnumType.STRING)
     private Language language;
 
+    @Min(0)
+    @NotNull
     private double price;
 
     @ManyToOne
     @JsonIgnoreProperties("articles")
-    @Valid
     private Card card;
 
 

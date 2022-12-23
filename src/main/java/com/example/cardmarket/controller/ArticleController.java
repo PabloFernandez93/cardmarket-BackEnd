@@ -33,7 +33,7 @@ public class ArticleController {
 
     //  add card
     @PostMapping
-    public ResponseEntity<Article> addCard(@RequestBody Article article) {
+    public ResponseEntity<Article> addCard(@RequestBody @Valid Article article) {
         if (article.getId() != null) {
             return ResponseEntity.badRequest().build();
         }
