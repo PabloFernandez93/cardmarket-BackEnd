@@ -31,6 +31,12 @@ public class ArticleController {
         return ResponseEntity.ok(articleService.findAll());
     }
 
+    //
+    @GetMapping("/all/{id}")
+    public ResponseEntity<List<Article>> getCardsbyName(@PathVariable long id) {
+        return ResponseEntity.ok(articleService.findAllByCardId(id));
+    }
+
     //  add card
     @PostMapping
     public ResponseEntity<Article> addCard(@RequestBody @Valid Article article) {

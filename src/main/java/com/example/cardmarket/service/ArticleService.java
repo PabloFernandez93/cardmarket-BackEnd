@@ -5,8 +5,10 @@ import com.example.cardmarket.repository.ArticleRepository;
 import com.example.cardmarket.repository.CardRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class ArticleService {
@@ -61,5 +63,12 @@ public class ArticleService {
                 });
     }
 
+
+    public List<Article> findAllByCardId(long id) {
+        List<Article> filteredList = new ArrayList<>();
+        return this.articleRepository.findAll().stream()
+                .filter(article -> article.getCard().getId()==id)
+                .collect(Collectors.toList());
+    }
 
 }
