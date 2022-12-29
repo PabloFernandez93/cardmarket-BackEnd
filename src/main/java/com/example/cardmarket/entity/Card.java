@@ -1,13 +1,9 @@
 package com.example.cardmarket.entity;
 
 import com.example.cardmarket.enums.CardType;
-import com.example.cardmarket.enums.Rarity;
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
@@ -35,8 +31,7 @@ public class Card {
 
     private String cardSet;
 
-    @Enumerated(EnumType.STRING)
-    private Rarity rarity;
+    private String rarity;
 
     private String image;
 
