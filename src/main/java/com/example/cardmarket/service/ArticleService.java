@@ -72,10 +72,4 @@ public class ArticleService {
                 .collect(Collectors.toList());
     }
 
-    public Article getRandomArticle() {
-        Random rand = new Random();
-        long upperBound = this.articleRepository.findAll().size();
-        long randomLong = rand.nextLong(upperBound) +1;
-        return this.articleRepository.findById(randomLong).get();
-    }
 }

@@ -8,6 +8,8 @@ import lombok.Setter;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.Random;
 
 @Service
 public class CardService {
@@ -23,4 +25,11 @@ public class CardService {
     }
 
     public Card findById(Long id) {return this.cardRepository.findById(id).get();}
+
+    public Card getRandomCard() {
+        Random rand = new Random();
+        long upperBound = this.cardRepository.findAll().size();
+        long randomLong = rand.nextLong(upperBound) +1;
+        return this.cardRepository.findById(randomLong).get();
+    }
 }
