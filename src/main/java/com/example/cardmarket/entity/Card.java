@@ -11,7 +11,6 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table (name = "Card")
 @Getter
 @Setter
 public class Card {
@@ -20,7 +19,7 @@ public class Card {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String serialNumber; //für die Kartenbezeichnung im jeweiligen Set, z.B. 01-102
+    private String serialNumber;
 
     private String name;
 

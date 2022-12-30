@@ -1,12 +1,10 @@
 package com.example.cardmarket.controller;
 
-import com.example.cardmarket.entity.Article;
 import com.example.cardmarket.entity.Card;
 import com.example.cardmarket.service.CardService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,20 +22,12 @@ public class CardController {
     }
 
     @GetMapping
-    public List<Card> getAllCards() {
-        return this.cardService.getAll();
+    public ResponseEntity<List<Card>> getAllCards() {
+        return ResponseEntity.ok(cardService.getAll());
     }
 
-    @GetMapping("/{id}")
-    public Card findById(@PathVariable Long id) {
-        return cardService.findById(id);
-    }
-
-    // get random card
     @GetMapping("/random")
     public ResponseEntity<Card> getRandomCard() {
         return ResponseEntity.ok(cardService.getRandomCard());
     }
-
-
 }

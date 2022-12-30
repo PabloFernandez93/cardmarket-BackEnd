@@ -15,14 +15,13 @@ public class CardmarketApplication implements CommandLineRunner {
 		this.articleService = articleService;
 	}
 
-
 	public static void main(String[] args) {
 		SpringApplication.run(CardmarketApplication.class, args);
 	}
 
 	@Override
 	@Transactional
-	public void run(String... args) throws Exception {
+	public void run(String... args) {
 		this.articleService.findAll().forEach(article -> this.articleService.updateAvailability(article));
 	}
 }

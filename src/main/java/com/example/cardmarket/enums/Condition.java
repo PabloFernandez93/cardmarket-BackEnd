@@ -10,4 +10,5 @@ public enum Condition {
     PLAYED,
     POOR,
     CUSTOM
+
 }

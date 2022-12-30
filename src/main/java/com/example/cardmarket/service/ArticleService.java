@@ -4,11 +4,8 @@ import com.example.cardmarket.entity.Article;
 import com.example.cardmarket.repository.ArticleRepository;
 import com.example.cardmarket.repository.CardRepository;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.Random;
 import java.util.stream.Collectors;
 
 @Service
@@ -17,17 +14,16 @@ public class ArticleService {
     private ArticleRepository articleRepository;
     private CardRepository cardRepository;
 
-
     public ArticleService(ArticleRepository articleRepository, CardRepository cardRepository) {
         this.articleRepository = articleRepository;
         this.cardRepository = cardRepository;
     }
 
     public List<Article> findAll() {
-        return (List<Article>) articleRepository.findAll();
+        return articleRepository.findAll();
     }
 
-    public Optional <Article> findById(Long id) {
+    public Optional<Article> findById(Long id) {
         return articleRepository.findById(id);
     }
 
@@ -36,19 +32,12 @@ public class ArticleService {
         updateAvailability(article);
     }
 
-    public void addArticles(List<Article> articles) {
-        articleRepository.saveAll(articles);
-        articles.forEach(article -> {
-            updateAvailability(article);
-        });
-    }
-
     public void deleteArticle(Long id) {
         Optional<Article> optArticle = articleRepository.findById(id);
         articleRepository.deleteById(id);
         optArticle.ifPresent(article ->
                 updateAvailability(article));
-            }
+    }
 
     public Article updateArticle(Article article) {
         return articleRepository.save(article);
@@ -64,12 +53,9 @@ public class ArticleService {
                 });
     }
 
-
     public List<Article> findAllByCardId(long id) {
-        List<Article> filteredList = new ArrayList<>();
         return this.articleRepository.findAll().stream()
-                .filter(article -> article.getCard().getId()==id)
+                .filter(article -> article.getCard().getId() == id)
                 .collect(Collectors.toList());
     }
-
 }

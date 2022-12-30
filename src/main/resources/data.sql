@@ -1,4 +1,3 @@
-
 INSERT INTO card(serial_number, name, type, availability, card_set, rarity, image) VALUES ('001-102', 'Alakazam', 'POKEMON', 0, 'Base Set', 'H★','https://cdn-cardmavin.mavin.io/wp-content/uploads/2018/11/Base_Set_card_1-109x150.jpg');
 INSERT INTO card(serial_number, name, type, availability, card_set, rarity, image) VALUES ('002-102', 'Blastoise', 'POKEMON', 0, 'Base Set', 'H★', 'https://cdn-cardmavin.mavin.io/wp-content/uploads/2018/11/Base_Set_card_2-109x150.jpg');
 INSERT INTO card(serial_number, name, type, availability, card_set, rarity, image) VALUES ('003-102', 'Chansey', 'POKEMON', 0, 'Base Set', 'H★', 'https://cdn-cardmavin.mavin.io/wp-content/uploads/2018/11/Base_Set_card_3-109x150.jpg');
