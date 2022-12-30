@@ -33,7 +33,7 @@ public class CardController {
         return cardService.findById(id);
     }
 
-    // get random article
+    // get random card
     @GetMapping("/random")
     public ResponseEntity<Card> getRandomCard() {
         return ResponseEntity.ok(cardService.getRandomCard());

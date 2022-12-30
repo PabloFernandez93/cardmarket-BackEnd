@@ -1,5 +1,6 @@
 package com.example.cardmarket.service;
 
+
 import com.example.cardmarket.entity.Card;
 import com.example.cardmarket.repository.CardRepository;
 import lombok.Getter;
