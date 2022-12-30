@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 @Service
@@ -71,4 +72,10 @@ public class ArticleService {
                 .collect(Collectors.toList());
     }
 
+    public Article getRandomArticle() {
+        Random rand = new Random();
+        long upperBound = this.articleRepository.findAll().size();
+        long randomLong = rand.nextLong(upperBound) +1;
+        return this.articleRepository.findById(randomLong).get();
+    }
 }

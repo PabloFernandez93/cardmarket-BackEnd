@@ -31,6 +31,11 @@ public class ArticleController {
         return ResponseEntity.ok(articleService.findAll());
     }
 
+    // get random article
+    @GetMapping("/random")
+    public ResponseEntity<Article> getRandomArticle() {
+        return ResponseEntity.ok(articleService.getRandomArticle());
+    }
     //
     @GetMapping("/all/{id}")
     public ResponseEntity<List<Article>> getCardsbyName(@PathVariable long id) {
