@@ -101,11 +101,11 @@ INSERT INTO card(serial_number, name, type, availability, card_set, rarity, imag
 INSERT INTO card(serial_number, name, type, availability, card_set, rarity, image) VALUES ('101-102', 'Psychic Energy', 'ENERGY', 0, 'Base Set', '⬤', 'https://cdn-cardmavin.mavin.io/wp-content/uploads/2018/11/Base_Set_card_101-109x150.jpg');
 INSERT INTO card(serial_number, name, type, availability, card_set, rarity, image) VALUES ('102-102', 'Water Energy', 'ENERGY', 0, 'Base Set', '⬤', 'https://cdn-cardmavin.mavin.io/wp-content/uploads/2018/11/Base_Set_card_102-109x150.jpg');
 
-INSERT INTO article(condition, language, price, card_id) VALUES ('MINT', 'ENGLISH', 15.2, 1);
-INSERT INTO article(condition, language, price, card_id) VALUES ('CUSTOM', 'ENGLISH', 15.2, 3);
-INSERT INTO article(condition, language, price, card_id) VALUES ('NEAR_MINT', 'ENGLISH', 15.2, 4);
-INSERT INTO article(condition, language, price, card_id) VALUES ('LIGHT_PLAYED', 'ENGLISH', 15.2, 5);
-INSERT INTO article(condition, language, price, card_id) VALUES ('CUSTOM', 'ENGLISH', 15.2, 1);
+-- INSERT INTO article(condition, language, price, card_id) VALUES ('MINT', 'ENGLISH', 15.2, 1);
+-- INSERT INTO article(condition, language, price, card_id) VALUES ('CUSTOM', 'ENGLISH', 15.2, 3);
+-- INSERT INTO article(condition, language, price, card_id) VALUES ('NEAR_MINT', 'ENGLISH', 15.2, 4);
+-- INSERT INTO article(condition, language, price, card_id) VALUES ('PLAYED', 'ENGLISH', 15.2, 5);
+-- INSERT INTO article(condition, language, price, card_id) VALUES ('CUSTOM', 'ENGLISH', 15.2, 1);
 
 
 

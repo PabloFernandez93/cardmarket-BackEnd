@@ -32,7 +32,6 @@ public class Article {
     @DecimalMin("0.01")
     @DecimalMax("9999.99")
     @NotNull
-//    @Pattern(regexp = "\^([\\d]{0,4})(\\.|$)([\\d]{1,2}|)$")
     private double price;
 
     @ManyToOne
